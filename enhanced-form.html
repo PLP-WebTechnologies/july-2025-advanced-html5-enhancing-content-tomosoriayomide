@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enhanced Form</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Contact Information</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Young Lite" required autocomplete="name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="younglite@example.com" required autocomplete="email">
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select a country</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="South-Africa">South-Africa</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="terms">Terms and Conditions:</label>
+                <input type="checkbox" id="terms" name="terms" required>
+                <span>I agree to the terms and conditions</span>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <section>
+            <h2>Form List</h2>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+<!--           table  -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cell 1</td>
+                        <td>Cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>Cell 3</td>
+                        <td>Cell 4</td>
+                    </tr>
+                </tbody>
+            </table>
+            <img src="image.jpg" alt="An example image">
+        </section>
+    </main>
+</body>
+</html>
+
+
+In this version, the required attribute is used to specify that the user must enter a value for each field before submitting the form. The browser will automatically validate the form and display an error message if any required fields are empty. The pattern attribute is also used for the phone number field to specify a pattern for the input value.
